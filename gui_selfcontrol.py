@@ -162,4 +162,4 @@ class selfcontrolGUI(selfcontrolCORE,QWidget):
 app = QApplication(["SelfControl"])
 s = selfcontrolGUI()
 s.show()
-app.exec_()
+sys.exit(app.exec_())
