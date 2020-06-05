@@ -39,8 +39,12 @@ class selfcontrolCORE:
 
         hostsFile.write("\n#SELFCONTROL BLOCK START\n")
         for site in blockedListFile:
+            if site[0] == "#":
+                continue
             addString = site
-            if site[0:4] != "www.":
+            if site[0] == "*":
+                addString = addString[1:]
+            elif site[0:4] != "www.":
                 addString = "www."+addString
             hostsFile.write("0.0.0.0 " +addString)
             hostsFile.write("::0 "+addString)
