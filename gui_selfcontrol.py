@@ -20,11 +20,11 @@ class selfcontrolCORE:
         os.system("cp "+self.hostsFilePath+" hosts_backup")
         os.system("cp hosts_backup hosts_new")
         self.addLinesToFile("hosts_new")
-        os.system("gksu cp hosts_new "+self.hostsFilePath)
+        os.system("sudo cp hosts_new "+self.hostsFilePath)
         #os.system("rm hosts_new")
 
     def endSelfcontrol(self):
-        os.system("gksu cp hosts_backup "+self.hostsFilePath)
+        os.system("sudo cp hosts_backup "+self.hostsFilePath)
 
 
     def addLinesToFile(self,duplicateHostsFilePath):
