@@ -1,8 +1,8 @@
 import os
 import sys
 import time
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout,QSlider,QLabel,QHBoxLayout,QScrollBar,QGridLayout
-from PyQt5.QtCore import QDateTime, Qt, QTimer
+from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout,QSlider,QLabel,QHBoxLayout,QScrollBar,QGridLayout
+from PyQt6.QtCore import QDateTime, Qt, QTimer
 
 class selfcontrolCORE:
     def __init__(self,blockedListFilePath = None, hostsFilePath = None):
@@ -98,7 +98,7 @@ class selfcontrolGUI(selfcontrolCORE,QWidget):
         self.countdownTimer.setStyleSheet("font: 48pt")
 
     def createSliderWidget(self):
-        self.slider = QSlider(Qt.Horizontal)
+        self.slider = QSlider(Qt.Orientation.Horizontal)
         self.slider.setMinimum(0)
         #up to 10 hours in half hour windows - Multiply by 1800 to get seconds
         self.slider.setMaximum(10*2)
@@ -166,4 +166,4 @@ class selfcontrolGUI(selfcontrolCORE,QWidget):
 app = QApplication(["SelfControl"])
 s = selfcontrolGUI()
 s.show()
-sys.exit(app.exec_())
+sys.exit(app.exec())
