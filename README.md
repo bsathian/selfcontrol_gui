@@ -3,8 +3,7 @@
 A Linux clone of the famous Mac application Selfcontrol (https://github.com/SelfControlApp/selfcontrol/) written in Python. A very alpha version that needs the terminal to run and relies on an additional text file. Essentially redirects a set of domain names from the text file to 0.0.0.0 by modifying the /etc/hosts file.
 
 Requirements
-1. gksu
-2. PyQt5
+1. PyQt6
 
 
 Instructions to run
