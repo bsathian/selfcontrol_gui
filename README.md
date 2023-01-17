@@ -4,6 +4,7 @@ A Linux clone of the famous Mac application Selfcontrol (https://github.com/Self
 
 Requirements
 1. PyQt6
+2. sudo access
 
 
 Instructions to run
