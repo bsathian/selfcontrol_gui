@@ -9,6 +9,6 @@ Requirements
 
 Instructions to run
 1. create a blocked.txt file
-2. run `python gui_selfcontrol.py`  from the terminal
+2. run `sudo python gui_selfcontrol.py`  from the terminal
 3. Set the timer
 4. Have fun!
